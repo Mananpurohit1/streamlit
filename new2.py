@@ -25,7 +25,7 @@ data_science_experience = st.selectbox("Years of Experience in Data Science", ex
 predefined_skills = [
     "Tableau", "Azure ML", "Neural networks with TensorFlow and Keras",
     "Computer Vision", "Natural Language Processing",
-    "Cloud Computing with AWS",Cloud Computing with Azure",
+    "Cloud Computing with AWS","Cloud Computing with Azure",
     "Gen AI", "ML Ops", "KNIME", "Rapidminer", "", "Prompt Engineering"
 ]
 
