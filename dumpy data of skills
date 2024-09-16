@@ -1,0 +1,42 @@
+import pandas as pd
+import numpy as np
+
+# Create sample DataFrame for 150 users
+np.random.seed(42)  # For reproducible random results
+
+# Predefined skills
+predefined_skills = [
+    "Tableau", "Azure ML", "Neural networks with TensorFlow and Keras",
+    "Computer Vision", "Natural Language Processing",
+    "Cloud Computing with AWS", "Cloud Computing with Azure",
+    "Gen AI", "ML Ops", "KNIME", "Rapidminer", "Prompt Engineering"
+]
+
+# Generate random names
+first_names = [f'First_{i}' for i in range(150)]
+last_names = [f'Last_{i}' for i in range(150)]
+
+# Generate random experiences
+overall_experience = [f"{np.random.randint(1, 30)} years" for _ in range(150)]
+data_science_experience = [f"{np.random.randint(0, 20)} years" for _ in range(150)]
+
+# Create a dictionary to store the DataFrame data
+data = {
+    'First Name': first_names,
+    'Last Name': last_names,
+    'Overall Experience': overall_experience,
+    'Data Science Experience': data_science_experience
+}
+
+# Generate random skill proficiencies for each predefined skill
+for skill in predefined_skills:
+    data[skill] = np.random.randint(0, 6, 150)  # from 0 to 5
+
+# Create DataFrame
+df = pd.DataFrame(data)
+
+# Display the first few rows of the DataFrame
+print(df.head())
+
+# Optional: Save to CSV
+# df.to_csv('skill_assessment_data.csv', index=False)
