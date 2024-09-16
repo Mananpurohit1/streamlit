@@ -2,7 +2,7 @@ import streamlit as st
 import pandas as pd
 from io Bytes
 
-st.title("Skill Assessment Form   # Initialize session state
+st.title("Skill Assessment Form")   # Initialize session state
 if 'proficiency_ratings' not in st.session_state:
     st.session_state.proficiency_ratings = {}
 if 'custom_skill_ratings' not in st.session_state:
